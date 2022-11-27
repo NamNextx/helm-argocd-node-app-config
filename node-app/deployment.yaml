@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: node-app
-          image: NamNextx/examplenode-dev:5
+          image: namphuong/examplenode-dev:6
           ports:
             - containerPort: 3000
