@@ -1,0 +1,6 @@
+apiVersion: v2 # version of file format
+name: node-app
+description: A Helm chart for deploy node-app
+type: application
+version: 0.1.0 # version of chart
+appVersion: "latest" # version of node-app
