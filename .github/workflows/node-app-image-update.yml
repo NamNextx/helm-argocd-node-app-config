@@ -13,7 +13,7 @@ jobs:
       id: imgupd
       uses: mikefarah/yq@master
       with:
-        cmd: yq eval '.image = "${{ github.event.client_payload.image }}"' -i ./helm-repo/values.yaml
+        cmd: yq eval '.image = "${{ github.event.client_payload.image }}"' -i helm-repo/values.yaml
       
     - uses: stefanzweifel/git-auto-commit-action@v4
       with:
