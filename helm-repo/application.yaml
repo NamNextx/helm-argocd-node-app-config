@@ -8,7 +8,7 @@ spec:
 
   source:
     repoURL: https://github.com/NamNextx/helm-argocd-node-app-config
-    path: node-app
+    path:
   destination: 
     server: https://kubernetes.default.svc
     namespace: node-app
