@@ -1,19 +1,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: node-app-helm
+  name: {{ .Release.Name }}
+  namespace: {{ template "common.namespaces" }}
 spec:
   selector:
-    matchLabels:
-      app: node-app-helm
+    matchLabels: {{ include "common.labels" . | nindent 6 }}
   replicas: 2
   template:
     metadata:
-      labels:
-        app: node-app-helm
+      labels: {{ include "common.labels" . | nindent 8 }}
     spec:
       containers:
-        - name: node-app-helm
-          image: namphuong/examplenode-dev:b83c6ee
+        - name: {{ .Release.Name }}
+          image: {{ .Values.image }}
           ports:
             - containerPort: {{ .Values.port }}
